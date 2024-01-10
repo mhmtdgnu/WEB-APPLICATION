@@ -5,6 +5,4 @@ WebApplication2 - Web uygulaması
 
 
 
-
-
-WebApplication1 - API
+WebApplication1 - JSON API PROJESİ
