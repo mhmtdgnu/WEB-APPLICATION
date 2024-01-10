@@ -25,3 +25,11 @@ Tasarımda .Net Core hem de MVC yapısı uygulanmıştır.
 
 
 Frontend tasarımı estetik şekilde yapılmaya çalışılmıştır.
+
+
+
+Sayfalar Responsive Yapılmıştır.
+
+
+Kendi eklediğim birden fazla özellik mevcuttur.
+
