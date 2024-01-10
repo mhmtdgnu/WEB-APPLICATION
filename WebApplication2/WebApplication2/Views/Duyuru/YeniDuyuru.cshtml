@@ -1,0 +1,30 @@
+﻿@model WebApplication2.Models.Entity.TBLDUYURULAR
+@{
+    ViewBag.Title = "YeniDuyuru";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<title>Yeni Duyuru Ekle</title>
+<br />
+<h2>Yeni Duyuru Ekle</h2>
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <label>Duyuru Kategorisi</label>
+        @Html.TextBoxFor(x => x.KATEGORI, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Duyuru İçeriği</label>
+        @Html.TextBoxFor(x => x.ICERIK, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <label>Duyuuru Tarihi</label>
+        @Html.TextBoxFor(x => x.TARIH, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-success" id="Btn1">Duyuru Ekle</button>
+    </div>
+
+</form>
+
+
+

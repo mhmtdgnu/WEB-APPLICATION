@@ -1,0 +1,28 @@
+﻿@model WebApplication2.Models.Entity.TBLKATEGORI
+
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<title>Yeni Kategori Ekle</title>
+<br />
+<h2>Yeni Kategori Ekle</h2>
+<form class="form-group" method="post">
+    <div></div>
+    <div style="margin-top:15px">
+        <style>
+            label {
+                margin-bottom: 10px; /* İhtiyacınıza göre boşluk miktarını ayarlayabilirsiniz */
+            }
+        </style>
+
+        <label>Kategori Adı</label>
+        <input type="text" class="form-control" name="AD" />
+    </div>
+    <div style="margin-top:15px">
+        <button class="btn btn-success" id="Btn1" style="background-color: forestgreen; color:white">Kategori Ekle</button>
+    </div>
+
+</form>
+

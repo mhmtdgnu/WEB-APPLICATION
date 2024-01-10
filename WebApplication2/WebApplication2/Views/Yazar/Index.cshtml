@@ -1,0 +1,34 @@
+﻿@using WebApplication2.Models.Entity
+@model List<TBLYAZAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<title>Yazarlar</title>
+<br />
+<h2>Yazarlar</h2>
+<br />
+
+<table class="table table-striped">
+    @*Tablo üst rengi*@
+    <tr style="background-color:#ff6a00">
+        <th>ID</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+        <th>YAZARIN KİTAPLARI</th>
+    </tr>
+    @foreach (var y in Model)
+    {
+        <tr>
+            <td>@y.ID</td>
+            <td>@y.AD</td>
+            <td>@y.SOYAD</td>
+            <td>@Html.ActionLink("Sil", "YazarSil", new { id = y.ID }, new { @class = "btn btn-danger", onclick = "return confirm('Silmek İstiyor Musunuz?')" })</td>
+            <td><a href="/Yazar/YazarGetir/@y.ID" class="btn btn" style="background-color: #063a60; color: white; ">Güncelle</a></td>
+            <td><a href="/Yazar/YazarKitaplar/@y.ID" class="btn btn" style="background-color:sienna;color:white">Yazarın Kitapları</a></td>
+        </tr>
+    }
+</table>
+<a class="btn btn-success" href="/Yazar/YazarEkle/">Yeni Yazar Ekle</a>

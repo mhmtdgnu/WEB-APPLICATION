@@ -1,0 +1,38 @@
+﻿@using WebApplication2.Models.Entity
+@model List<TBLKATEGORI>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+<title>Kategoriler</title>
+<br />
+<h2>Kategoriler</h2>
+<br />
+
+<table class="table table-striped">
+    @*Tablo üst rengi*@
+    <tr style="background-color:#ff6a00">
+        <th>KATEGORİ ID</th>
+        <th>KATEGORİ ADI</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var ktg in Model)
+    {
+        <tr>
+            <td>@ktg.ID</td>
+            <td>@ktg.AD</td>
+            <td><a href="/Kategori/KategoriSil/@ktg.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Kategori/KategoriGetir/@ktg.ID" class="btn btn" style="background-color: #063a60; color: white; ">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<style>
+    .btn-success {
+        margin-bottom: 20px; /* İhtiyacınıza göre boşluk miktarını ayarlayabilirsiniz */
+    }
+</style>
+
+<a href="/Kategori/KategoriEkle" class="btn btn-success">Yeni Kategori Ekle</a>
+
+
